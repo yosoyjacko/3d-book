@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(208, 208, 208);
+}
+
+.container-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}
+
+.container-book .book {
+    position: relative;
+    width: 383px;
+    height: 567px;
+    box-shadow: 20px 20px 20px rgba(0,0,0,2);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.container-book .book:hover {
+    transform: rotateY(35deg);
+    box-shadow: 20px 20px 20px rgba(0,0,0,2);
+}
+
+.container-book .book:active {
+    transform: rotateY(180deg);
+    
+}
+
+.container-book .book:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    transform-origin: left;
+    background: url(../Assets/img/lomo1.jpg);
+    background-position: center;
+    transform: rotateY(90deg);
+}
+
+.container-book .book:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    background: url(../Assets/img/tapaBack.jpg);
+    background-position: center;
+    transform: rotateY(180deg) translateZ(60px);
+    object-fit: cover;
+    object-position: center center;
+}
+
+.container-book .book img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// .img {
+//     width: 100%;
+//     height: 86vh;
+//     align-items: center;
+//     display: flex;
+//     justify-content: center;
+// }
